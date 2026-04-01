@@ -15,7 +15,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-custom py-3">
       <div className="container">
         <Link className="navbar-brand fw-bolder fs-4" to="/">
-          🚀 AlumniConnect
+           AlumniConnect
         </Link>
 
         <div>
