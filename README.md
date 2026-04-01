@@ -10,7 +10,7 @@ Topic: Alumni Mentorship &amp; Career Connect Platform
 A modern, full-stack web application designed to bridge the gap between current students and university alumni. This platform facilitates seamless networking, allowing students to browse alumni profiles and request 1-on-1 mentorship sessions for career guidance.
 
 ##  Live Demo
-* **Frontend (Vercel):** [Insert your .vercel.app link here]
+* **Frontend (Vercel):** https://byte-builders-woad.vercel.app/
 * **Backend API (Render):** [https://byte-builders-j8ca.onrender.com](https://byte-builders-j8ca.onrender.com)
 
 ---
