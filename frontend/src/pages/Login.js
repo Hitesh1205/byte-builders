@@ -19,7 +19,7 @@ function Login() {
   };
 
   return (
-    <div className="row justify-content-center align-items-center" style={{ minHeight: "75vh" }}>
+    <div className="row justify-content-center align-items-center bg-info" style={{ minHeight: "75vh" }}>
       <div className="col-md-5">
         <div className="card modern-card p-5">
           <div className="text-center mb-4">
