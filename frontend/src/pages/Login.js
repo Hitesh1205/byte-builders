@@ -21,7 +21,7 @@ function Login() {
   return (
     <div className="row justify-content-center align-items-center" style={{ minHeight: "75vh" }}>
       <div className="col-md-5">
-        <div className="card modern-card p-5 bg-info">
+        <div className="card modern-card p-5">
           <div className="text-center mb-4">
             <h2 className="fw-bold">Welcome Back</h2>
             <p className="text-muted">Login to continue your mentorship journey.</p>
