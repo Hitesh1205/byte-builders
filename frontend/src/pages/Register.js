@@ -18,7 +18,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", formData);
+      await axios.post("https://byte-builders-j8ca.onrender.com/api/auth/register", formData);
       alert("Registration Successful! Please login.");
       navigate("/");
     } catch (err) {

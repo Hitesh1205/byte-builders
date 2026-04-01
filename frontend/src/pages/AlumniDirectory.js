@@ -14,7 +14,7 @@ function AlumniDirectory() {
 
   const fetchAlumni = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/users/alumni");
+      const res = await axios.get("https://byte-builders-j8ca.onrender.com/api/users/alumni");
       setAlumni(res.data);
     } catch (err) { console.log(err); }
   };
@@ -29,7 +29,7 @@ function AlumniDirectory() {
     if (!messages[alumniId] || messages[alumniId].trim() === "") return alert("Please provide a specific ask.");
 
     try {
-      await axios.post("http://localhost:5000/api/request/send", {
+      await axios.post("hhttps://byte-builders-j8ca.onrender.com/api/request/send", {
         studentId: user._id, alumniId, message: messages[alumniId]
       });
       alert("Mentorship Request Sent Successfully!");

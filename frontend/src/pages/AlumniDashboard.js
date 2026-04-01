@@ -15,7 +15,7 @@ function AlumniDashboard() {
 
   const fetchRequests = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/request/alumni/${user._id}`);
+      const res = await axios.get(`https://byte-builders-j8ca.onrender.com/api/request/alumni/${user._id}`);
       setRequests(res.data);
     } catch (err) { console.log(err); }
   };
@@ -26,7 +26,7 @@ function AlumniDashboard() {
     if (meetingDate === null) return; 
 
     try {
-      await axios.put("http://localhost:5000/api/request/update-status", {
+      await axios.put("https://byte-builders-j8ca.onrender.com/api/request/update-status", {
         requestId, status: "accepted", meetingLink, meetingDate
       });
       alert("Request Accepted and Link Generated!");
@@ -37,7 +37,7 @@ function AlumniDashboard() {
   const handleReject = async (requestId) => {
     if(!window.confirm("Decline this request?")) return;
     try {
-      await axios.put("http://localhost:5000/api/request/update-status", { requestId, status: "rejected" });
+      await axios.put("https://byte-builders-j8ca.onrender.com/api/request/update-status", { requestId, status: "rejected" });
       fetchRequests();
     } catch (err) { alert("Error rejecting"); }
   };
@@ -45,7 +45,7 @@ function AlumniDashboard() {
   const submitFeedback = async (requestId) => {
     if (!feedbackInput[requestId]) return alert("Please enter feedback");
     try {
-      await axios.put("http://localhost:5000/api/request/feedback", {
+      await axios.put("https://byte-builders-j8ca.onrender.com/api/request/feedback", {
         requestId, role: "alumni", feedback: feedbackInput[requestId]
       });
       alert("Session marked as completed.");
@@ -56,7 +56,7 @@ function AlumniDashboard() {
   const handleDeleteAccount = async () => {
     if (window.confirm("⚠️ WARNING: Are you sure you want to permanently delete your Alumni account? This will erase all your mentorship records.")) {
       try {
-        await axios.delete(`http://localhost:5000/api/users/${user._id}`);
+        await axios.delete(`https://byte-builders-j8ca.onrender.com/api/users/${user._id}`);
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         alert("Account deleted successfully.");

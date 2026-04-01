@@ -15,7 +15,7 @@ function StudentDashboard() {
 
   const fetchRequests = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/request/student/${user._id}`);
+      const res = await axios.get(`https://byte-builders-j8ca.onrender.com/api/request/student/${user._id}`);
       setRequests(res.data);
     } catch (err) { console.log(err); }
   };
@@ -23,7 +23,7 @@ function StudentDashboard() {
   const submitFeedback = async (requestId) => {
     if (!feedbackInput[requestId]) return alert("Please enter feedback");
     try {
-      await axios.put("http://localhost:5000/api/request/feedback", {
+      await axios.put("https://byte-builders-j8ca.onrender.com/api/request/feedback", {
         requestId, role: "student", feedback: feedbackInput[requestId]
       });
       alert("Feedback saved successfully.");
@@ -34,7 +34,7 @@ function StudentDashboard() {
   const handleDeleteAccount = async () => {
     if (window.confirm("⚠️ WARNING: Are you sure you want to permanently delete your account? This action cannot be undone and will delete all your mentorship history.")) {
       try {
-        await axios.delete(`http://localhost:5000/api/users/${user._id}`);
+        await axios.delete(`https://byte-builders-j8ca.onrender.com/api/users/${user._id}`);
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         alert("Account deleted successfully.");
